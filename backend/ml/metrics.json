@@ -1,0 +1,212 @@
+{
+  "health": {
+    "mae": 0.03425871235098876,
+    "rmse": 0.0492526303533257,
+    "r2": 0.9717640719328513,
+    "degrading_regime_mae": 0.040092272596149774,
+    "degrading_regime_rmse": 0.052030347181757454,
+    "degrading_regime_r2": 0.9497921608542101,
+    "cv_degrading_regime_r2_mean": 0.9370910887715524,
+    "cv_degrading_regime_r2_std": 0.013175933283124332,
+    "feature_count": 84,
+    "model_type": "XGBoost Regressor (n_estimators=200, max_depth=6, lr=0.03)",
+    "target": "Smooth degradation curve: 1.0 until 40% of life, then 1 - ((u-0.4)/0.6)^1.8"
+  },
+  "rul_rf": {
+    "mae": 13.581971303330112,
+    "rmse": 18.454800208892436,
+    "r2": 0.8040486697701216,
+    "model_type": "RandomForestRegressor (n_estimators=100, max_depth=12)"
+  },
+  "rul_lstm": {
+    "mae": 11.532584190368652,
+    "rmse": 16.42852375663333,
+    "r2": 0.845840573310852,
+    "model_type": "LSTM(128) -> LSTM(64) -> Dense(32) -> Dense(1)",
+    "sequence_length": 20,
+    "epochs": 27
+  },
+  "sensor_importance": {
+    "health": [
+      {
+        "sensor": "sensor_11",
+        "importance": 0.2043
+      },
+      {
+        "sensor": "sensor_4",
+        "importance": 0.1671
+      },
+      {
+        "sensor": "sensor_15",
+        "importance": 0.0887
+      },
+      {
+        "sensor": "sensor_9",
+        "importance": 0.0836
+      },
+      {
+        "sensor": "sensor_12",
+        "importance": 0.0833
+      },
+      {
+        "sensor": "sensor_7",
+        "importance": 0.0726
+      },
+      {
+        "sensor": "sensor_14",
+        "importance": 0.0472
+      },
+      {
+        "sensor": "sensor_2",
+        "importance": 0.0462
+      },
+      {
+        "sensor": "sensor_20",
+        "importance": 0.0458
+      },
+      {
+        "sensor": "sensor_17",
+        "importance": 0.0412
+      },
+      {
+        "sensor": "sensor_21",
+        "importance": 0.0388
+      },
+      {
+        "sensor": "sensor_3",
+        "importance": 0.033
+      },
+      {
+        "sensor": "sensor_13",
+        "importance": 0.0271
+      },
+      {
+        "sensor": "sensor_8",
+        "importance": 0.0208
+      },
+      {
+        "sensor": "sensor_6",
+        "importance": 0.0004
+      },
+      {
+        "sensor": "sensor_1",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_5",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_10",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_16",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_18",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_19",
+        "importance": 0.0
+      }
+    ],
+    "rul": [
+      {
+        "sensor": "sensor_11",
+        "importance": 0.4551
+      },
+      {
+        "sensor": "sensor_9",
+        "importance": 0.145
+      },
+      {
+        "sensor": "sensor_4",
+        "importance": 0.0932
+      },
+      {
+        "sensor": "sensor_12",
+        "importance": 0.0766
+      },
+      {
+        "sensor": "sensor_7",
+        "importance": 0.0456
+      },
+      {
+        "sensor": "sensor_14",
+        "importance": 0.0362
+      },
+      {
+        "sensor": "sensor_15",
+        "importance": 0.0348
+      },
+      {
+        "sensor": "sensor_2",
+        "importance": 0.0198
+      },
+      {
+        "sensor": "sensor_13",
+        "importance": 0.0196
+      },
+      {
+        "sensor": "sensor_21",
+        "importance": 0.0188
+      },
+      {
+        "sensor": "sensor_20",
+        "importance": 0.0178
+      },
+      {
+        "sensor": "sensor_3",
+        "importance": 0.0168
+      },
+      {
+        "sensor": "sensor_8",
+        "importance": 0.0139
+      },
+      {
+        "sensor": "sensor_17",
+        "importance": 0.0067
+      },
+      {
+        "sensor": "sensor_1",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_5",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_6",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_10",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_16",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_18",
+        "importance": 0.0
+      },
+      {
+        "sensor": "sensor_19",
+        "importance": 0.0
+      }
+    ]
+  },
+  "dataset": {
+    "name": "NASA C-MAPSS FD001",
+    "engines": 100,
+    "train_engines": 80,
+    "test_engines": 20,
+    "rows": 20631,
+    "rul_cap": 125
+  },
+  "trained_at": "2026-10-17T16:52:39+00:00"
+}

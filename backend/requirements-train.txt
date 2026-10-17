@@ -1,0 +1,5 @@
+# Training (and LSTM serving). Install on top of the serving requirements.
+-r requirements.txt
+tensorflow==2.21.0
+# Only needed by the scripts in research/
+matplotlib>=3.8

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: prognosys-api
+    env: python
+    branch: main
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn app:app --host 0.0.0.0 --port $PORT
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: FRONTEND_URL
+        sync: false
+      - key: HF_MODEL_ID
+        sync: false
+      - key: HF_TOKEN
+        sync: false

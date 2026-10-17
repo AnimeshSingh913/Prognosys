@@ -1,0 +1,12 @@
+# API serving. The Random Forest + XGBoost models run without TensorFlow.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+pandas>=2.2
+numpy>=1.26
+# Pinned: the saved model files must be loaded with the versions they were trained with
+scikit-learn==1.9.0
+xgboost==3.2.0
+joblib>=1.3
+sqlalchemy>=2.0
+huggingface_hub>=0.23
