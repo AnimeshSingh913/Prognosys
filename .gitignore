@@ -23,11 +23,6 @@ backend/data/*.csv
 # Logs
 *.log
 
-# Trained ML models (too large for git)
-backend/ml/*.joblib
-backend/ml/*.keras
-backend/ml/*.pkl
-
 # Database files
 *.db
 *.sqlite3

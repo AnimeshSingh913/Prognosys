@@ -111,9 +111,7 @@ engine_id,cycle,sensor_1,sensor_2,...,sensor_21
 
 ## Deployment
 
-**API (Render):** `render.yaml` installs `backend/requirements.txt`. That set runs the XGBoost and Random Forest models without TensorFlow, and RUL falls back to the Random Forest. Model files are not committed, so either:
-- run `python upload_to_hf.py` and set `HF_MODEL_ID` and `HF_TOKEN`, so models download at startup, or
-- bake `backend/ml/*` into the image.
+**API (Render):** `render.yaml` installs `backend/requirements.txt`. That set runs the XGBoost and Random Forest models without TensorFlow, and RUL falls back to the Random Forest. The trained models (~18 MB) are committed in `backend/ml/`, so the service works straight from GitHub. After retraining, commit the new files, or host them on the Hugging Face Hub with `python upload_to_hf.py` and set `HF_MODEL_ID` and `HF_TOKEN`.
 
 | Variable | Purpose |
 |---|---|
